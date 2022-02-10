@@ -1,1 +1,14 @@
-<p>companies works!</p>
+<section class="topper">
+    <h2 data-aos="fade" data-aos-duration="500" data-aos-delay="300">Oferta dla firm</h2>
+</section>
+<section class="container" data-aos="slide-left" data-aos-duration="300" data-aos-delay="500">
+    <div class="class" *ngFor="let class of offer">
+        <h4 class="title">{{class.title}}</h4>
+        <div *ngFor="let category of class.category; let i = index">
+            <p *ngIf="category.title">{{ (i+1) + category.title}}</p>
+            <ul>
+                <li *ngFor="let point of category.points"><span>{{point}}</span></li>
+            </ul>
+        </div>
+    </div>
+</section>

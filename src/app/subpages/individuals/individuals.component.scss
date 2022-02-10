@@ -1,0 +1,68 @@
+@import '../../scss/colors';
+@import '../../scss/variables';
+@import '../../landing-page/landing-page.component.scss';
+.topper {
+    max-width: 100vw;
+    min-height: 70vh;
+    background: linear-gradient(180deg, rgba($color-primary, 0.5) 80%, rgba($color-white, 1) 98%), url('../../../assets/jpg-png/architecture.jpg') center center no-repeat;
+    background-size: cover !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    padding-top: 8rem;
+    h2 {
+        color: $color-white;
+        font-family: $title-font;
+        font-size: 5rem;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.container {
+    h4 {
+        margin-left: 0;
+        font-weight: 300;
+        width: max-content;
+        max-width: 100%;
+    }
+    div {
+        &:not(:first-child) {
+            margin-top: 5rem;
+        }
+        p {
+            font-size: 2.3rem;
+            font-weight: bold;
+            font-family: $light-font;
+        }
+        ul {
+            list-style: none;
+            // padding-left: 2%;
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 2rem;
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+                &::before {
+                    content: "\2022";
+                    color: $color-primary-dark;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    display: inline-block;
+                    min-width: 3rem;
+                    width: 3rem;
+                    margin-left: 1%;
+                }
+                &:not(:last-of-type) {
+                    border-bottom: 2px solid $color-grey-0;
+                }
+            }
+        }
+    }
+    padding: 3% 5%;
+    min-height: max-content;
+}

@@ -1,0 +1,59 @@
+[{
+        "title": "Developerzy, Spółdzielnie mieszkaniowe, Instytucje publiczne",
+        "category": [{
+            "title": "Inspektor nadzoru Inwestorskiego branży sanitarnej",
+            "points": [
+                "reprezentowanie inwestora na budowie przez sprawowanie kontroli zgodności jej realizacji z projektem, przepisami, zasadami wiedzy budowalnej, pozwoleniem na budowę",
+                "kontrolowanie jakości wykonywanych robót i wbudowanych materiałów budowlanych, a szczególnie zapobieganie stosowaniu wyrobów wadliwych, niedopuszczonych do stosowania w budownictwie, niezgodnych z projektem",
+                "sprawdzanie i odbiór robót budowlanych ulegających zakryciu lub zanikających, uczestniczenie w próbach i odbiorach technicznych instalacji, urządzeń technicznych orazprzygotowanie i udział w czynnościach odbioru gotowych obiektów budowlanych i przekazywanie ich do użytkowania",
+                "potwierdzanie faktycznie wykonywanych robót oraz usunięcie wad, a także, na życzenie inwestora, kontrolowanie rozliczeń budowy",
+                "doradztwo inżynierskie w zakresie robót branży sanitarnej"
+            ]
+        }, {
+            "title": "Koordynator projektów branży sanitarnej",
+            "points": [
+                "przygotowanie założeń projektowych dla projektów branżowych",
+                "weryfikacjadokumentacji technicznej pod katem zastosowanych rozwiązań",
+                "analiza dokumentacji technicznej pod katem optymalizacji projektu pozwalającej na obniżenie kosztów inwestycyjnych (optymalizacja kosztowa i technologiczna)",
+                "przygotowanie dokumentacji przetargowej (SIWZ, wzory umowy, itp.)",
+                "opracowywanie obmiarów, wycen, tabel rozliczeniowych do przetargów (TPCJ), itp.",
+                "doradztwo inżynierskie w zakresie robót branży sanitarnej w fazie projektowej i wykonawczej",
+                "dopasowanie do oczekiwań Inwestora"
+            ]
+        }]
+    },
+    {
+        "title": "Generalni Wykonawcy i Wykonawcy robót",
+        "category": [{
+            "title": "Koordynator robót branży sanitarnej/kierownik robót",
+            "points": [
+                "weryfikacja projektu budowlanego, wykonawczego, specyfikacji technicznych, zmian lokatorskich, dokumentacji powykonawczej, itp.",
+                "pozyskanie niezbędnych zasobów do wykonania robót - podwykonawców, usługodawców, materiałów",
+                "nadzorowanie jakości i terminowości wykonywanych robót, zgodności z przedmiotem umowy",
+                "udział w odbiorach robót sanitarnych przeprowadzonych przez Inwestorów",
+                "udział w naradach koordynacyjnych z Inwestorem oraz z podwykonawcami",
+                "udział w odbiorach lokali przez ich nabywców",
+                "udział w prowadzeniu rozliczeń za wykonane roboty z Inwestorem oraz Podwykonawcami",
+                "koordynacja prac sił własnych i podwykonawców",
+                "weryfikacja kalkulacji kosztowych",
+                "analiza dokumentacji technicznej",
+                "rozliczanie kosztów realizowanych robót, sporządzanie zestawień zużytych materiałów, kontrola wykonania budżetu oraz prowadzenie niezbędnej dokumentacji inwestycji w zakresie powierzonych zadań",
+                "nadzorowanie i współudział w przygotowaniu dokumentacji powykonawczej i odbiorowej",
+                "współpraca z GW, Inwestorem i Podwykonawcami, koordynowanie robót branży sanitarnej z innymi branżami",
+                "nadzór nad przestrzeganiem BHP",
+                "doradztwo inżynierskie w zakresie robót branży sanitarnej"
+            ]
+        }]
+    },
+    {
+        "title": "Właściciele/zarządcy budynków i mieszkań",
+        "category": [{
+            "points": [
+                "badania okresowe budynków (instalacje sanitarne, wentylacja)",
+                "ekspertyzy/ oceny stanu technicznego",
+                "doradztwo inżynierskie w zakresie robót branży sanitarnej",
+                "ocena stanu technicznego oraz efektywności pracujących systemów"
+            ]
+        }]
+    }
+]

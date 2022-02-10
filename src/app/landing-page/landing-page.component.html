@@ -1,13 +1,14 @@
+<h1 style="display: none;">Nazarko Company - Nadzory, Koordynacja, Doradztwo Techniczne - Branża Sanitarna </h1>
 <section class="start" id="/">
     <div class="container">
         <div>
-            <h2>Profesjonalny nadzór instalacji sanitarnych</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut cursus augue, eu egestas ante. Curabitur sagittis convallis elit, vel consequat nisi fringilla non</p>
+            <h2 data-aos="fade-left" data-aos-duration="1000">Profesjonalny nadzór instalacji sanitarnych</h2>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut cursus augue, eu egestas ante. Curabitur sagittis convallis elit, vel consequat nisi fringilla non</p> -->
         </div>
     </div>
     <div class="bottom">
-        <a class="learn-more" href="#oferta">
-            <button class="button">
+        <a href="#oferta">
+            <button class="button" data-aos="slide-up" data-aos-anchor=".start" data-aos-duration="1000" data-aos-delay="800">
                     <div>
                         <img src="../../assets/svg/arrow_down.svg">
                         <span>Dowiedz się wiecej</span>
@@ -24,47 +25,67 @@
     </p>
 
     <div class="square-container">
-        <div class="square square-1" [routerLink]="['/oferta-dla-osob-prywatnych']">
+        <div class="square square-1" (click)="navigate('/oferta-dla-osob-prywatnych')" data-aos="flip-down">
             <h4>Osoby prywatne</h4>
         </div>
-        <div class="square square-2" [routerLink]="['/oferta-dla-firm']">
+        <div class="square square-2" (click)="navigate('/oferta-dla-firm')" data-aos="flip-down">
             <h4>Firmy</h4>
         </div>
     </div>
 </section>
 <section class="about" id="o-mnie">
-    <div>
+    <div data-aos="slide-right" data-aos-offset="200" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
         <h3 class="title">O mnie</h3>
         <p>
             Jestem Inżynierem z ponad piętnastoletnim doświadczeniem w przygotowaniu i realizacji Inwestycji, zdobytym na różnych szczeblach od Inżyniera Budowy, Kierownika Budowy, Kierownika Działu Przygotowania Produkcji po Dyrektora Działu Przygotowania Produkcji.
-            Zdobyłem doświadczenie przy realizacji obiektów budownictwa mieszkalnego wielorodzinnego, hoteli, basenów, budynków medycznych jak i przy budowie infrastruktury technicznej. Zajmuję się świadczeniem szerokiego zakresu usług związanych z branżą
-            instalacji sanitarnych.
-            <br>Doświadczenie oraz wiedza jaką zdobyłem dają Państwu gwarancję wykonania usług profesjonalnie i na wysokim poziomie. Klientom zapewniam profesjonalną pomoc.
+            Pozyskałem doświadczenie przy realizacji obiektów budownictwa mieszkalnego wielorodzinnego, hoteli, basenów, budynków medycznych jak i przy budowie infrastruktury technicznej. Zajmuję się świadczeniem szerokiego zakresu usług związanych z
+            branżą instalacji sanitarnych.
+            <br>Doświadczenie oraz wiedza jakie posiadam dają Państwu gwarancję wykonania usług profesjonalnie i na wysokim poziomie. Klientom zapewniam profesjonalną pomoc.
             <br>Działam głównie na terenie miasta Rzeszowa, powiatu rzeszowskiego i lubaczowskiego, ale również na terenie całego województwa podkarpackiego. Rozważę również każda ofertę współpracy z innych regionów Polski.
         </p>
     </div>
-    <img src="../../assets/jpg-png/IMG_20220209_121403.jpg">
+    <img src="../../assets/jpg-png/IMG_20220209_121403.jpg" data-aos="zoom-in" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
 </section>
 <section class="contact" id="kontakt">
     <div class="container">
-        <div class="contact-data">
+        <div class="contact-data" data-aos="zoom-out-right">
             <h3 class="title">Kontakt</h3>
-            <div *ngFor="let item of contact" class="contact-data-detail">
-                <img [src]="'../../assets/svg/' + item.icon">
-                <p>{{item.text}}</p>
-            </div>
+            <a class="contact-data-detail" href="tel:+48 663 744 944">
+                <img src="../../assets/svg/whatsapp_icon.svg">
+                <p>+48 663 744 944</p>
+            </a>
+            <a class="contact-data-detail" href="mailto:kontakt@nazarko-company.pl?subject=&body=" target="_blank">
+                <img src="../../assets/svg/email_icon.svg">
+                <p>kontakt@nazarko-company.pl</p>
+            </a>
+            <a class="contact-data-detail" href="https://goo.gl/maps/CPmk7Chx9BtMFqaq6" target="_blank">
+                <img src="../../assets/svg/location_icon.svg">
+                <p>ul. Myśliwska 148, 37-620 Horyzniec-Zdrój</p>
+            </a>
+            <a class="contact-data-detail" href="https://www.facebook.com/NC-Nadzory-Koordynacja-Doradztwo-Techniczne-Bran%C5%BCa-Sanitarna-104558435479138" target="_blank">
+                <img src="../../assets/svg/facebook_icon.svg">
+                <p>NC - Nadzory, Koordynacja, Doradztwo Techniczne - Branża Sanitarna</p>
+            </a>
         </div>
-        <div class="message">
+        <div class="message" [formGroup]="form" data-aos="zoom-out-left" data-aos-delay="200">
             <h3 class="title">Zostaw mi wiadomość</h3>
-            <input placeholder="Imię i nazwisko" type="text">
-            <input placeholder="Adres e-mail" type="email">
-            <textarea placeholder="Wiadomość"></textarea>
-            <button class="button">
-                <div>
-                    <span>Wyślij</span>
-                    <img src="../../assets/svg/send_arrow.svg">
-                </div>
-            </button>
+            <ng-container *ngIf="!sended">
+                <input placeholder="Imię i nazwisko" type="text" id="name" autocomplete="name" [ngClass]="{'input-invalid': isControlInvalid('sender')}" formControlName="sender">
+                <input placeholder="Adres e-mail" type="email" id="email" autocomplete="email" [ngClass]="{'input-invalid': isControlInvalid('sender_email')}" formControlName="sender_email">
+                <textarea placeholder="Wiadomość" id="message" [ngClass]="{'input-invalid': isControlInvalid('message')}" formControlName="message"></textarea>
+                <button class="button" (click)="onSubmit()" [disabled]="!isFormGroupValid">
+                    <div>
+                        <span>Wyślij</span>
+                        <img src="../../assets/svg/send_arrow.svg">
+                    </div>
+                </button>
+            </ng-container>
+            <div class="success" *ngIf="sended">
+                <img src="../../assets/svg/check.svg">
+                <p>
+                    Wiadomość została wysłana
+                </p>
+            </div>
         </div>
     </div>
 </section>

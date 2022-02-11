@@ -5,7 +5,7 @@
     <div class="class" *ngFor="let class of offer">
         <h4 class="title">{{class.title}}</h4>
         <div *ngFor="let category of class.category; let i = index">
-            <p *ngIf="category.title">{{ (i+1) + category.title}}</p>
+            <p *ngIf="category.title">{{category.title}}</p>
             <ul>
                 <li *ngFor="let point of category.points"><span>{{point}}</span></li>
             </ul>
